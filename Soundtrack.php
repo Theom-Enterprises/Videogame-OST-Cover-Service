@@ -4,22 +4,22 @@ namespace THEOM\Videogame_OST_Cover_Service;
 
 require_once 'Song.php';
 
-class OST
+class Soundtrack
 {
-    private string $uid;
+    private int $uid;
     private string $name;
     private string $videoGameName;
     private float $releaseYear;
-    private $trackList;
+    private Song $trackList;
 
     /**
-     * @param string $uid
+     * @param int $uid
      * @param string $name
      * @param string $videoGameName
-     * @param float $releaseYear
+     * @param int $releaseYear
      * @param $trackList
      */
-    public function __construct(string $uid, string $name, string $videoGameName, float $releaseYear, $trackList)
+    public function __construct(int $uid, string $name, string $videoGameName, int $releaseYear, $trackList)
     {
         $this->uid = $uid;
         $this->name = $name;
@@ -29,9 +29,9 @@ class OST
     }
 
     /**
-     * @return string
+     * @return int
      */
-    public function getUid(): string
+    public function getUid(): int
     {
         return $this->uid;
     }
@@ -53,17 +53,17 @@ class OST
     }
 
     /**
-     * @return float
+     * @return int
      */
-    public function getReleaseYear(): float
+    public function getReleaseYear(): int
     {
         return $this->releaseYear;
     }
 
     /**
-     * @return mixed
+     * @return Song
      */
-    public function getTrackList()
+    public function getTrackList(): Song
     {
         return $this->trackList;
     }

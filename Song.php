@@ -4,20 +4,20 @@ namespace THEOM\Videogame_OST_Cover_Service;
 
 class Song
 {
-    private $uid;
-    private $name;
-    private $artist;
-    private $trackNumber;
-    private $duration;
+    private int $uid;
+    private string $name;
+    private string $artist;
+    private int $trackNumber;
+    private int $duration; // duration in minutes
 
     /**
-     * @param $uid
-     * @param $name
-     * @param $artist
-     * @param $trackNumber
-     * @param $duration
+     * @param int $uid
+     * @param string $name
+     * @param string $artist
+     * @param int $trackNumber
+     * @param int $duration
      */
-    public function __construct($uid, $name, $artist, $trackNumber, $duration)
+    public function __construct(int $uid, string $name, string $artist, int $trackNumber, int $duration)
     {
         $this->uid = $uid;
         $this->name = $name;
@@ -27,41 +27,41 @@ class Song
     }
 
     /**
-     * @return mixed
+     * @return int
      */
-    public function getUid()
+    public function getUid(): int
     {
         return $this->uid;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }
 
     /**
-     * @return mixed
+     * @return string
      */
-    public function getArtist()
+    public function getArtist(): string
     {
         return $this->artist;
     }
 
     /**
-     * @return mixed
+     * @return int
      */
-    public function getTrackNumber()
+    public function getTrackNumber(): int
     {
         return $this->trackNumber;
     }
 
     /**
-     * @return mixed
+     * @return int
      */
-    public function getDuration()
+    public function getDuration(): int
     {
         return $this->duration;
     }
