@@ -2,7 +2,9 @@
 
 namespace THEOM\Videogame_OST_Cover_Service;
 
-class Song
+use JsonSerializable;
+
+class Song implements JsonSerializable
 {
     private int $uid;
     private string $name;
@@ -66,4 +68,14 @@ class Song
         return $this->duration;
     }
 
+    public function jsonSerialize()
+    {
+        return [
+            'uid' => $this->getUid(),
+            'name' => $this->getName(),
+            'artist' => $this->getArtist(),
+            'trackNumber' => $this->getTrackNumber(),
+            'duration' => $this->getDuration(),
+        ];
+    }
 }

@@ -8,7 +8,7 @@ require_once 'Song.php';
 class Seeder
 {
 
-    public function seed()
+    public static function seed(): array
     {
         $aloneInTheDarkSongs[] = new Song(1, 'Prelude to an End', 'Olivier Deriviere', 1, 60+33);
         $aloneInTheDarkSongs[] = new Song(1, 'Edward Carnby', 'Olivier Deriviere', 2, 2*60+36);
