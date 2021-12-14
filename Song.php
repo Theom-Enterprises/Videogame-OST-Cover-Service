@@ -10,7 +10,7 @@ class Song implements JsonSerializable
     private string $name;
     private string $artist;
     private int $trackNumber;
-    private int $duration; // duration in minutes
+    private int $duration; // duration in seconds
 
     /**
      * @param int $uid
