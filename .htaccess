@@ -1,0 +1,11 @@
+###START MOD_REWRITE
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    ### Remove .html extension
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^([^.]+)$ $1.html [NC,L]
+
+    RewriteRule ^(ost)/([^/.]+)/?(song)?/?([^/.]+)? index.php?ost=$2&$3=$4
+</IfModule>
+###END MOD_REWRITE
