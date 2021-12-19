@@ -25,7 +25,7 @@ if (isset($_GET['ost'])) {
             echo json_encode($soundtrack);
         }
     } else {
-        echo json_encode(['Fehler' => "Dieses OST wurde nicht gefunden: $ost", "Test" => findSoundtrackByID($soundtracks, $ost)]);
+        echo json_encode(['Fehler' => "Dieses OST wurde nicht gefunden: $ost"]);
     }
 }
 
